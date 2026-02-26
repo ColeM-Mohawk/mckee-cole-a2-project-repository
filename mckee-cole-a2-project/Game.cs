@@ -10,7 +10,6 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
- 
 
         /// <summary>
         ///     Setup runs once before the game loop begins.
@@ -31,10 +30,28 @@ namespace MohawkGame2D
             Window.ClearBackground(Color.OffWhite);
 
 
+            // Head
+
             // Draw circle for head
             Draw.FillColor = new Color(255, 219, 172);
             Draw.LineColor = Color.Black;
             Draw.Circle(400, 150, 95);
+
+            Draw.FillColor = Color.Blue;
+            Draw.LineColor = Color.Black;
+            Draw.Circle(360, 125, 25);
+
+            Draw.FillColor = Color.Blue;
+            Draw.LineColor = Color.Black;
+            Draw.Circle(437, 125, 25);
+
+            Draw.FillColor = Color.Black;
+            Draw.LineColor = Color.Black;
+            Draw.Circle(360, 125, 10);
+
+            Draw.FillColor = Color.Black;
+            Draw.LineColor = Color.Black;
+            Draw.Circle(437, 125, 10);
 
             // Draw a fly at mouse position
             Draw.FillColor = Color.Black;
