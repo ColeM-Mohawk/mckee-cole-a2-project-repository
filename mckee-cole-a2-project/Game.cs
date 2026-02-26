@@ -10,8 +10,7 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
-        // Place your variables here:
-
+ 
 
         /// <summary>
         ///     Setup runs once before the game loop begins.
@@ -19,9 +18,9 @@ namespace MohawkGame2D
         public void Setup()
         {
             // Window Setup
-            Window.SetTitle("Placeholder");
+            Window.SetTitle("Fly Simulator");
             Window.SetSize(800, 600);
-
+           
         }
 
         /// <summary>
@@ -30,7 +29,21 @@ namespace MohawkGame2D
         public void Update()
         {
             Window.ClearBackground(Color.OffWhite);
+
+
+            // Draw circle for head
+            Draw.FillColor = new Color(255, 219, 172);
+            Draw.LineColor = Color.Black;
+            Draw.Circle(400, 150, 95);
+
+            // Draw a fly at mouse position
+            Draw.FillColor = Color.Black;
+            Draw.LineColor = Color.LightGray;
+            Draw.Ellipse(Input.GetMouseX(), Input.GetMouseY(), 30, 45);
+
+
         }
+
     }
 
 }
