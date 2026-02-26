@@ -1,4 +1,5 @@
 ﻿// Include the namespaces (code libraries) you need below.
+using Raylib_cs;
 using System;
 using System.Numerics;
 
@@ -19,7 +20,7 @@ namespace MohawkGame2D
             // Window Setup
             Window.SetTitle("Fly Simulator");
             Window.SetSize(800, 600);
-           
+
         }
 
         /// <summary>
@@ -58,9 +59,36 @@ namespace MohawkGame2D
             Draw.LineColor = Color.LightGray;
             Draw.Ellipse(Input.GetMouseX(), Input.GetMouseY(), 30, 45);
 
+            if (Input.IsMouseButtonDown(MouseInput.Right))
+            {
+
+                Draw.FillColor = Color.Red;
+                Draw.LineColor = Color.Black;
+                Draw.Circle(400, 150, 95);
+
+                Draw.FillColor = Color.Blue;
+                Draw.LineColor = Color.Black;
+                Draw.Circle(360, 125, 25);
+
+                Draw.FillColor = Color.Blue;
+                Draw.LineColor = Color.Black;
+                Draw.Circle(437, 125, 25);
+
+                Draw.FillColor = new Color(437, 125, 25);
+                Draw.LineColor = Color.Black;
+                Draw.Circle(360, 125, 10);
+
+                Draw.FillColor = new Color(437, 125, 25);
+                Draw.LineColor = Color.Black;
+                Draw.Circle(437, 125, 10);
+
+                Draw.FillColor = Color.Black;
+                Draw.LineColor = Color.LightGray;
+                Draw.Ellipse(Input.GetMouseX(), Input.GetMouseY(), 30, 45);
+            }
+
+        }
 
         }
 
     }
-
-}
